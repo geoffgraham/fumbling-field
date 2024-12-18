@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = 'About Geoff'
@@ -22,9 +24,7 @@ const skills = ['HTML', 'CSS', 'Copywriting'];
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Header />
 
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
@@ -44,5 +44,7 @@ const skills = ['HTML', 'CSS', 'Copywriting'];
     <ul>
       {skills.map((skill) => <li>{skill}</li>)}
     </ul>
+
+    <Footer />
   </body>
 </html>
