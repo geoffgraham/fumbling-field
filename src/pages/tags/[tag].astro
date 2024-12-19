@@ -5,7 +5,6 @@ import BlogPost from '../../components/BlogPost.astro';
 export async function getStaticPaths() {
   const allPosts = Object.values(import.meta.glob('../blog/*.md', { eager: true }));
 
-
   return [
     { params: { tag: "astro" }, props: {posts: allPosts} },
     { params: { tag: "blogging" }, props: {posts: allPosts} },
